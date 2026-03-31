@@ -373,6 +373,68 @@ section {
 }
 
 /* =====================
+   IMAGES
+   ===================== */
+
+/* Homepage card thumbnail */
+.project-image {
+  margin: -48px -48px 24px -48px;
+  overflow: hidden;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.project-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 8 / 5;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.02);
+}
+
+/* Case study hero image */
+.case-hero-image {
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.case-hero-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1440 / 640;
+  object-fit: cover;
+}
+
+/* Case study inline image */
+.case-inline-image {
+  margin: 0 0 72px 0;
+  border: 1px solid #e8e8e8;
+  overflow: hidden;
+}
+
+.case-inline-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.case-inline-image figcaption {
+  padding: 12px 16px;
+  font-size: 12px;
+  color: #aaa;
+  border-top: 1px solid #e8e8e8;
+  background: #fafafa;
+}
+
+/* =====================
    ANIMATION
    ===================== */
 
@@ -712,6 +774,10 @@ section {
 
   .project-card {
     padding: 32px 24px;
+  }
+
+  .project-image {
+    margin: -32px -24px 20px -24px;
   }
 
   .contact {
