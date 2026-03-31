@@ -187,7 +187,34 @@
       <div class="contact-links">
         <a href="mailto:fplevi@gmail.com" class="contact-link">fplevi@gmail.com</a>
         <a href="https://api.whatsapp.com/send?phone=5561999077204&text=Ol%C3%A1" class="contact-link" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://www.linkedin.com/in/fplevi/" class="contact-link" target="_blank" rel="noopener">LinkedIn</a>
       </div>
+
+      <form
+        class="contact-form fade-in"
+        action="https://formspree.io/f/mreokypa"
+        method="POST"
+      >
+        <input type="hidden" name="_replyto" value="fplevi@gmail.com">
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="email">Your email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-field">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project inquiry, collaboration…" required>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Tell me about your project or idea." required></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">Send message →</button>
+      </form>
     </div>
   </section>
 
