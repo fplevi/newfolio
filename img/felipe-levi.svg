@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720" width="600" height="720">
+  <rect width="600" height="720" fill="#EBEBEB"/>
+  <!-- Subtle grid -->
+  <line x1="300" y1="0" x2="300" y2="720" stroke="#E2E2E2" stroke-width="1"/>
+  <line x1="0" y1="360" x2="600" y2="360" stroke="#E2E2E2" stroke-width="1"/>
+  <!-- Corner marks -->
+  <polyline points="24,48 24,24 48,24" fill="none" stroke="#CCCCCC" stroke-width="1.5"/>
+  <polyline points="576,48 576,24 552,24" fill="none" stroke="#CCCCCC" stroke-width="1.5"/>
+  <polyline points="24,672 24,696 48,696" fill="none" stroke="#CCCCCC" stroke-width="1.5"/>
+  <polyline points="576,672 576,696 552,696" fill="none" stroke="#CCCCCC" stroke-width="1.5"/>
+  <!-- Person silhouette - head -->
+  <circle cx="300" cy="272" r="72" fill="#D4D4D4"/>
+  <!-- Person silhouette - shoulders -->
+  <path d="M 120 540 Q 120 420 300 420 Q 480 420 480 540 L 480 720 L 120 720 Z" fill="#D4D4D4"/>
+  <!-- Label -->
+  <text x="300" y="656" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#BBBBBB" text-anchor="middle" letter-spacing="0.04em">Felipe Levi</text>
+  <text x="300" y="676" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#CCCCCC" text-anchor="middle" letter-spacing="0.06em">Replace with your photo</text>
+</svg>
