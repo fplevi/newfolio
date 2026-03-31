@@ -4,7 +4,9 @@
       "WebFetch(domain:fplevi.notion.site)",
       "mcp__claude_ai_Notion__notion-fetch",
       "mcp__claude_ai_Notion__notion-search",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(sed -i 's/  -moz-osx-font-smoothing: grayscale;/  -moz-osx-font-smoothing: grayscale;\\\\n  max-width: 1280px;\\\\n  margin-left: auto;\\\\n  margin-right: auto;/' style.css)",
+      "Bash(sed -i 's/  padding: 20px 48px;/  padding: 20px clamp\\(48px, calc\\(\\(100vw - 1280px\\) \\\\/ 2 + 48px\\), 9999px\\);/' style.css)"
     ]
   }
 }
