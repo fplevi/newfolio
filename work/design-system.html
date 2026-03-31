@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scaling with a design system — Felipe Levi</title>
+  <meta name="description" content="How Harmony — a unified design system — cut delivery cycle time by 50% across five platforms after three years of organizational groundwork.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="../index.html" class="nav-back">← All work</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#work">Work</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- CASE HEADER -->
+    <header class="case-header">
+      <div class="case-header-inner">
+        <div class="case-meta-row">
+          <span class="case-company">CASSI</span>
+          <span class="case-dot">·</span>
+          <span class="case-role">Leadership &amp; Technical Performance</span>
+          <span class="case-dot">·</span>
+          <span class="project-status in-development">In development</span>
+          <span class="case-dot">·</span>
+          <span class="case-access-note">Access by video call</span>
+        </div>
+        <h1 class="case-title">Scaling with<br>a design system</h1>
+        <p class="case-subtitle">How Harmony — a unified design system — cut delivery cycle time by 50% across five platforms, built after three years of organizational groundwork and delivered in three months.</p>
+      </div>
+    </header>
+
+    <!-- OUTCOMES BAR -->
+    <div class="outcomes-bar">
+      <div class="outcome-item">
+        <span class="outcome-number">50%</span>
+        <span class="outcome-label">reduction in delivery cycle time</span>
+      </div>
+      <div class="outcome-item">
+        <span class="outcome-number">5</span>
+        <span class="outcome-label">platforms unified under one system</span>
+      </div>
+      <div class="outcome-item">
+        <span class="outcome-number">3 months</span>
+        <span class="outcome-label">to build after 3 years of organizational groundwork</span>
+      </div>
+    </div>
+
+    <!-- CASE BODY -->
+    <div class="case-body">
+
+      <section class="case-section fade-in">
+        <h2>Context</h2>
+        <p>Most organizations don't build a design system because they want one. They build one because the cost of not having it finally exceeds the cost of stopping to build it.</p>
+        <p>At CASSI that tipping point came after four years of parallel libraries, diverging components, and design decisions that couldn't propagate across five separate platforms. Harmony is the system we built to fix that.</p>
+        <p>CASSI's digital ecosystem spans five platforms: a participant portal, a public-facing site, an employee intranet, the main mobile app, and a second app built from scratch for a specific beneficiary segment. When the UX team was founded in 2022, each product evolved independently — maintained by separate Figma libraries with different update cycles, inconsistent token structures, and no shared governance.</p>
+        <p>The consequence wasn't just visual inconsistency — though that was real. The deeper cost was decision debt. Every pattern solved in one platform had to be re-litigated in the next. Accessibility criteria established for one product weren't guaranteed to carry over. Components built for mobile didn't inform web. Four years of design work existed in five places simultaneously, and effectively in none of them.</p>
+      </section>
+
+      <section class="case-section fade-in">
+        <h2>The real problem</h2>
+        <p>The surface problem was maintenance overhead. The real problem was that CASSI had no mechanism for design decisions to compound.</p>
+        <p>Good decisions made in one product — an accessible error state, a well-tested form pattern, a content standard that reduced call center contacts — existed only in that product. The next team working on a different platform started from scratch, or worse, from a slightly wrong copy of what the first team had built. The cost wasn't visible in any single sprint. It was structural, and it grew with every new feature shipped.</p>
+        <p><strong>Harmony's goal wasn't to standardize aesthetics. It was to make good decisions durable.</strong></p>
+      </section>
+
+      <section class="case-section fade-in">
+        <h2>My role</h2>
+        <p>I led Harmony from initial articulation through production launch — including three years of organizational groundwork before a line was built.</p>
+        <p>That groundwork matters as context. The initiative originated as an internal need within the Marketing team. I identified the overlap with UX's own fragmentation problem and brokered the alignment between Marketing, UX, and IT that turned a vague shared frustration into a funded, staffed project.</p>
+        <ul class="case-list">
+          <li>Defined the governance model and what enters and exits the library.</li>
+          <li>Led the hands-on build of components, tokens, and variables.</li>
+          <li>Established the review process for library contributions.</li>
+          <li>Oversaw adoption across all five platforms.</li>
+          <li>Led the UX team of up to nine people during the majority of Harmony's development — meaning the system had to be built in parallel with active product delivery, not instead of it.</li>
+        </ul>
+      </section>
+
+      <section class="case-section fade-in">
+        <h2>Key decisions</h2>
+        <div class="challenge-grid">
+          <div class="challenge-item">
+            <span class="challenge-label">Unification over federation</span>
+            <p>One library, not a coordinated family of libraries. A federated model was rejected because CASSI's team size and cross-platform consistency requirements meant federation's maintenance overhead would recreate the problem we were solving.</p>
+          </div>
+          <div class="challenge-item">
+            <span class="challenge-label">React + Next.js</span>
+            <p>As an organizational decision — a dominant market stack that widens the available talent pool, reduces onboarding friction, and is compatible with AI-assisted development workflows. The technology choice was as much about organizational sustainability as technical quality.</p>
+          </div>
+          <div class="challenge-item">
+            <span class="challenge-label">Adobe React Aria</span>
+            <p>For accessibility primitives — correct keyboard navigation, ARIA roles, focus management, screen reader behavior — out of the box. This removed an entire category of solved problems from Harmony's roadmap, so the team's energy went to decisions that were actually specific to CASSI's context.</p>
+          </div>
+          <div class="challenge-item">
+            <span class="challenge-label">Accessibility as structure</span>
+            <p>ContentOps standards and accessibility criteria were built into components at the token and property level — not documented separately as guidelines. An error state ships with the correct contrast ratio, the right ARIA attributes, and a content pattern, because those aren't three separate decisions. They're one component.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section fade-in">
+        <h2>Results</h2>
+        <div class="results-grid">
+          <div class="result-card">
+            <span class="result-number">50%</span>
+            <p>reduction in delivery cycle time — second product took 8 weeks vs 16 for the first</p>
+          </div>
+          <div class="result-card">
+            <span class="result-number">5</span>
+            <p>platforms live on Harmony — adoption is the path of least resistance</p>
+          </div>
+          <div class="result-card">
+            <span class="result-number">Jan 2026</span>
+            <p>coded Storybook library launched</p>
+          </div>
+          <div class="result-card">
+            <span class="result-number">1 source</span>
+            <p>of truth consolidating four years of UX decisions</p>
+          </div>
+        </div>
+        <p class="case-results-note">Beyond delivery speed, Harmony consolidates four years of UX decisions into a single governed source of truth. Cross-channel consistency, which previously depended on individual designer discipline, is now a structural property of the system. New team members build from validated patterns rather than reconstructing decisions their predecessors already made.</p>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- NEXT PROJECT -->
+  <div class="next-project">
+    <a href="more-subscriptions.html" class="next-project-link">
+      <span class="next-label">Back to first project</span>
+      <span class="next-title">More subscriptions to health plans →</span>
+    </a>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-content fade-in">
+      <h2>Let's work<br>together</h2>
+      <p>Available for new projects, collaborations, and conversations.</p>
+      <div class="contact-links">
+        <a href="mailto:fplevi@gmail.com" class="contact-link">fplevi@gmail.com</a>
+        <a href="https://api.whatsapp.com/send?phone=5561999077204&text=Ol%C3%A1" class="contact-link" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>© 2026 Felipe Levi</span>
+    <span>Brasília, Brazil</span>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

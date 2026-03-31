@@ -393,6 +393,290 @@ section {
 .project-card:nth-child(4) { transition-delay: 0.15s; }
 
 /* =====================
+   CASE STUDY PAGES
+   ===================== */
+
+.nav-back {
+  font-size: 13px;
+  color: #666;
+  transition: color 0.2s;
+}
+
+.nav-back:hover {
+  color: #111;
+}
+
+.case-header {
+  padding: 160px 48px 80px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.case-header-inner {
+  max-width: 900px;
+}
+
+.case-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.case-company {
+  font-size: 12px;
+  font-weight: 600;
+  color: #999;
+  letter-spacing: 0.05em;
+}
+
+.case-dot {
+  color: #ddd;
+  font-size: 12px;
+}
+
+.case-role {
+  font-size: 12px;
+  color: #999;
+}
+
+.case-live-link {
+  font-size: 12px;
+  font-weight: 500;
+  color: #111;
+  transition: opacity 0.2s;
+}
+
+.case-live-link:hover {
+  opacity: 0.6;
+}
+
+.case-access-note {
+  font-size: 12px;
+  color: #999;
+}
+
+.case-title {
+  font-size: clamp(48px, 8vw, 104px);
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  margin-bottom: 32px;
+}
+
+.case-subtitle {
+  font-size: clamp(16px, 1.8vw, 20px);
+  color: #555;
+  line-height: 1.55;
+  max-width: 640px;
+}
+
+/* Outcomes bar */
+.outcomes-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.outcome-item {
+  padding: 40px 48px;
+  border-right: 1px solid #e8e8e8;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.outcome-item:last-child {
+  border-right: none;
+}
+
+.outcome-item .outcome-number {
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.outcome-item .outcome-label {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+  max-width: 200px;
+}
+
+/* Case body */
+.case-body {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 96px 48px 120px;
+}
+
+.case-section {
+  margin-bottom: 72px;
+}
+
+.case-section h2 {
+  font-size: 11px;
+  font-weight: 600;
+  color: #999;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.case-section h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+  margin-top: 32px;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.case-section p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.case-section p:last-child {
+  margin-bottom: 0;
+}
+
+.case-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.case-list li {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.7;
+  padding-left: 16px;
+  position: relative;
+}
+
+.case-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: #ccc;
+  font-size: 12px;
+  top: 4px;
+}
+
+/* Challenge grid */
+.challenge-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  margin-top: 8px;
+}
+
+.challenge-item {
+  background: #fff;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.challenge-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111;
+  letter-spacing: -0.01em;
+}
+
+.challenge-item p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Results grid */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  margin-bottom: 24px;
+}
+
+.result-card {
+  background: #f8f8f8;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.result-number {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.result-card p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.case-results-note {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.75;
+  font-style: italic;
+}
+
+/* Next project */
+.next-project {
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.next-project-link {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 48px;
+  transition: background 0.2s;
+}
+
+.next-project-link:hover {
+  background: #fafafa;
+}
+
+.next-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #999;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.next-title {
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #111;
+}
+
+/* =====================
    RESPONSIVE
    ===================== */
 
@@ -439,5 +723,37 @@ section {
     flex-direction: column;
     gap: 6px;
     text-align: center;
+  }
+
+  /* Case study responsive */
+  .case-header {
+    padding: 100px 24px 56px;
+  }
+
+  .outcomes-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .outcome-item {
+    padding: 28px 24px;
+    border-right: none;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  .outcome-item:last-child {
+    border-bottom: none;
+  }
+
+  .case-body {
+    padding: 64px 24px 80px;
+  }
+
+  .challenge-grid,
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .next-project-link {
+    padding: 32px 24px;
   }
 }
