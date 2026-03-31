@@ -128,7 +128,7 @@ a {
   flex-shrink: 0;
   width: 400px;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: flex-end;
 }
 
