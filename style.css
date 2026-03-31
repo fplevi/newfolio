@@ -10,6 +10,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -81,7 +82,6 @@ a {
   align-items: center;
   gap: 80px;
   padding: 120px 48px 80px;
-  overflow: visible;
 }
 
 .hero-left {
@@ -126,19 +126,17 @@ a {
 /* Hero visual — stacked cards */
 .hero-visual {
   flex-shrink: 0;
-  width: 480px;
+  width: 400px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: visible;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .hero-cards {
   position: relative;
   width: 300px;
-  height: 300px;
+  height: 420px;
   cursor: pointer;
-  overflow: visible;
 }
 
 .hero-card {
@@ -171,9 +169,9 @@ a {
   white-space: nowrap;
 }
 
-/* Resting — stacked with depth cues */
+/* Resting — clearly stacked, depth visible */
 .hero-card--front {
-  top: 0;
+  bottom: 0;
   left: 0;
   z-index: 3;
   transform: rotate(-3deg);
@@ -181,42 +179,39 @@ a {
 }
 
 .hero-card--mid {
-  top: 0;
+  bottom: 0;
   left: 0;
   z-index: 2;
-  transform: rotate(3deg) translate(14px, 20px);
+  transform: rotate(3deg) translate(8px, -60px);
   opacity: 0.85;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }
 
 .hero-card--back {
-  top: 0;
+  bottom: 0;
   left: 0;
   z-index: 1;
-  transform: rotate(8deg) translate(28px, 40px);
+  transform: rotate(7deg) translate(16px, -120px);
   opacity: 0.65;
 }
 
-/* Hover — fan out left / center / right with no overlap */
+/* Hover — fan upward, z-index never changes */
 .hero-cards:hover .hero-card--front {
-  transform: rotate(-5deg) translate(-200px, -24px);
-  box-shadow: 0 20px 56px rgba(0, 0, 0, 0.15);
+  transform: rotate(-4deg) translate(-16px, -16px);
+  box-shadow: 0 20px 56px rgba(0, 0, 0, 0.14);
   opacity: 1;
-  z-index: 3;
 }
 
 .hero-cards:hover .hero-card--mid {
-  transform: rotate(0deg) translate(0px, -48px);
+  transform: rotate(0deg) translate(8px, -220px);
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.10);
   opacity: 1;
-  z-index: 4;
 }
 
 .hero-cards:hover .hero-card--back {
-  transform: rotate(5deg) translate(200px, -8px);
+  transform: rotate(4deg) translate(24px, -360px);
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
   opacity: 1;
-  z-index: 3;
 }
 
 /* =====================
