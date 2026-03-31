@@ -374,6 +374,12 @@ section {
 
 .project-link:hover {
   gap: 10px;
+  text-decoration: underline;
+}
+
+.project-image-link {
+  display: block;
+  text-decoration: none;
 }
 
 /* =====================
