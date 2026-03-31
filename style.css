@@ -77,10 +77,17 @@ a {
 .hero {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 80px;
   padding: 120px 48px 80px;
-  position: relative;
+}
+
+.hero-left {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-label {
@@ -93,28 +100,108 @@ a {
 }
 
 .hero-name {
-  font-size: clamp(72px, 11vw, 152px);
+  font-size: clamp(56px, 8vw, 128px);
   font-weight: 700;
   line-height: 0.88;
   letter-spacing: -0.04em;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
 .hero-tagline {
-  font-size: clamp(17px, 2vw, 22px);
+  font-size: clamp(16px, 1.6vw, 20px);
   color: #555;
-  max-width: 400px;
+  max-width: 380px;
   line-height: 1.5;
+  margin-bottom: 48px;
 }
 
 .hero-meta {
-  position: absolute;
-  bottom: 48px;
-  left: 48px;
   display: flex;
-  gap: 32px;
+  gap: 28px;
   font-size: 13px;
   color: #aaa;
+}
+
+/* Hero visual — stacked cards */
+.hero-visual {
+  flex-shrink: 0;
+  width: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-cards {
+  position: relative;
+  width: 360px;
+  height: 320px;
+  cursor: pointer;
+}
+
+.hero-card {
+  display: block;
+  position: absolute;
+  width: 88%;
+  border: 1px solid #e8e8e8;
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.5s ease;
+  text-decoration: none;
+}
+
+.hero-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero-card-label {
+  display: block;
+  padding: 8px 12px;
+  font-size: 11px;
+  color: #999;
+  background: #fafafa;
+  border-top: 1px solid #e8e8e8;
+  letter-spacing: 0.02em;
+}
+
+.hero-card--front {
+  top: 0;
+  left: 6%;
+  z-index: 3;
+  transform: rotate(-1.5deg);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.09);
+}
+
+.hero-card--mid {
+  top: 20px;
+  left: 3%;
+  z-index: 2;
+  transform: rotate(2deg);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.hero-card--back {
+  top: 40px;
+  left: 0;
+  z-index: 1;
+  transform: rotate(5deg);
+}
+
+/* Fan out on hover */
+.hero-cards:hover .hero-card--front {
+  transform: rotate(-3deg) translateY(-16px);
+  box-shadow: 0 20px 56px rgba(0, 0, 0, 0.13);
+}
+
+.hero-cards:hover .hero-card--mid {
+  transform: rotate(3.5deg) translate(24px, 8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+}
+
+.hero-cards:hover .hero-card--back {
+  transform: rotate(8deg) translate(48px, 20px);
 }
 
 /* =====================
@@ -777,14 +864,24 @@ section {
   }
 
   .hero {
-    padding: 100px 24px 80px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 56px;
+    padding: 100px 24px 64px;
   }
 
   .hero-meta {
-    left: 24px;
-    bottom: 32px;
     flex-direction: column;
     gap: 4px;
+  }
+
+  .hero-visual {
+    width: 100%;
+  }
+
+  .hero-cards {
+    width: 100%;
+    height: 260px;
   }
 
   section {
