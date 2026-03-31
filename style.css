@@ -323,29 +323,42 @@ section {
   flex: 1;
 }
 
-.project-outcome {
-  display: flex;
-  align-items: baseline;
-  gap: 14px;
-  padding: 16px 0;
+.project-outcomes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid #ebebeb;
   border-bottom: 1px solid #ebebeb;
   margin-top: 4px;
 }
 
+.project-outcome {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px 0;
+  border-right: 1px solid #ebebeb;
+}
+
+.project-outcome:last-child {
+  border-right: none;
+  padding-left: 16px;
+}
+
+.project-outcome:not(:first-child) {
+  padding-left: 16px;
+}
+
 .outcome-number {
-  font-size: 36px;
+  font-size: clamp(18px, 2.2vw, 26px);
   font-weight: 700;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.03em;
   line-height: 1;
-  flex-shrink: 0;
 }
 
 .outcome-label {
-  font-size: 12px;
-  color: #777;
-  line-height: 1.5;
-  max-width: 180px;
+  font-size: 11px;
+  color: #888;
+  line-height: 1.4;
 }
 
 .project-link {
